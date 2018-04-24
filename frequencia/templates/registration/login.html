@@ -1,6 +1,6 @@
 {% extends "frequencia/base.html" %}
 
-{% load crispy_forms_tags %}
+<!--{% load crispy_forms_tags %}-->
 
 {% block content %}
     {% if form.errors %}
@@ -11,7 +11,7 @@
     <form method="post" action="{% url 'login' %}">
     {% csrf_token %}
         
-    {{ form|crispy }}
+    {{ form }}
 
     <input type="submit" class="btn btn-primary" value="Logar" />
     <input type="hidden" name="next" value="{{ next }}" />
